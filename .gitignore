@@ -66,6 +66,9 @@ yarn-error.log
 # testing
 /coverage
 
+# Ignore the README file
+README.md
+
 # Yarn
 .yarn/*
 !.yarn/patches
