@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import First from './src/Components/First';
+import OnPress from './src/Components/OnPress';
 
 const App = () => {
   return (
@@ -10,9 +11,9 @@ const App = () => {
           fontSize: 20,
         }}
       >
-        My first React app using Android Studio
+        React Native
       </Text>
-      <Button title="Press Here!" />
+      <OnPress/>
       <First />
     </View>
   );
