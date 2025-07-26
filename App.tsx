@@ -4,12 +4,14 @@ import First from './src/Components/First';
 import OnPress from './src/Components/OnPress';
 import UseState from './src/Components/UseState';
 import Props from './src/Components/Props';
+import InputText from './src/Components/InputText';
 
 const App = () => {
   return (
     <View>
       {/* <UseState/> */}
-      <Props/>
+      {/* <Props> */}
+      <InputText/>
     </View>
   );
 };
