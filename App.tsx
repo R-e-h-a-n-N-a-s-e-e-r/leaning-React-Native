@@ -6,6 +6,7 @@ import UseState from './src/Components/UseState';
 import Props from './src/Components/Props';
 import InputText from './src/Components/InputText';
 import Styling from './src/Components/Styling';
+import FlatListScreen from './src/Components/FlatListScreen';
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       {/* <UseState/> */}
       {/* <Props> */}
       {/* <InputText/> */}
-      <Styling />
+      {/* <Styling /> */}
+      <FlatListScreen />
     </View>
   );
 };
