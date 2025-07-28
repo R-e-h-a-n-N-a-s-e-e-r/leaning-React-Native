@@ -7,15 +7,18 @@ import Props from './src/Components/Props';
 import InputText from './src/Components/InputText';
 import Styling from './src/Components/Styling';
 import FlatListScreen from './src/Components/FlatListScreen';
+import SectionListScreen from './src/Components/SectionListScreen';
 
 const App = () => {
   return (
     <View>
+      {/* <First /> */}
       {/* <UseState/> */}
       {/* <Props> */}
       {/* <InputText/> */}
       {/* <Styling /> */}
-      <FlatListScreen />
+      {/* <FlatListScreen /> */}
+      <SectionListScreen />
     </View>
   );
 };

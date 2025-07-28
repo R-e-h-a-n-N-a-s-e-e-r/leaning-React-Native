@@ -21,6 +21,7 @@ const FlatListScreen = () => {
   );
   return (
     <View>
+        {/* FlatList only works with array of objects or array of strings */}
       <FlatList
         data={data}
         renderItem={RenderItem}
