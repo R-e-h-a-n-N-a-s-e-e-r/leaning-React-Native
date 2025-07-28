@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import LoginForm from './src/Components/LoginForm';
+import ContantListScreen from './src/Screens/Contant/ContantListScreen';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       {/* <Styling /> */}
       {/* <FlatListScreen /> */}
       {/* <SectionListScreen /> */}
-      <LoginForm />
+      <ContantListScreen/>
     </View>
   );
 };
