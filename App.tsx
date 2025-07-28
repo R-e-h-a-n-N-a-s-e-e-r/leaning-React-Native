@@ -1,13 +1,6 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import First from './src/Components/First';
-import OnPress from './src/Components/OnPress';
-import UseState from './src/Components/UseState';
-import Props from './src/Components/Props';
-import InputText from './src/Components/InputText';
-import Styling from './src/Components/Styling';
-import FlatListScreen from './src/Components/FlatListScreen';
-import SectionListScreen from './src/Components/SectionListScreen';
+import LoginForm from './src/Components/LoginForm';
 
 const App = () => {
   return (
@@ -18,7 +11,8 @@ const App = () => {
       {/* <InputText/> */}
       {/* <Styling /> */}
       {/* <FlatListScreen /> */}
-      <SectionListScreen />
+      {/* <SectionListScreen /> */}
+      <LoginForm />
     </View>
   );
 };
