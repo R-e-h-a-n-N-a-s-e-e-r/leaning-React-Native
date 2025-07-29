@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import Grid from './src/Components/Grid';
+import { ClassComponent } from './src/Components/ClassComponent';
+// import Grid from './src/Components/Grid';
 // import First from './src/Components/First';
 // import UseState from './src/Components/UseState';
 // import Props from './src/Components/Props';
@@ -13,7 +14,7 @@ import Grid from './src/Components/Grid';
 
 const App = () => {
   return (
-    <View style={{flex: 1,padding: 5}}>
+    <View style={{ flex: 1, padding: 5 }}>
       {/* <First />
       <UseState />
       <Props />
@@ -21,7 +22,8 @@ const App = () => {
       <Styling />
       <FlatListScreen />
       <SectionListScreen /> */}
-      <Grid />
+      {/* <Grid /> */}
+      <ClassComponent />
     </View>
   );
 };
