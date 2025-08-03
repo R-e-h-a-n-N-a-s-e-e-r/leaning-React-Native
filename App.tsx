@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import UseEffect from './src/Components/UseEffectHook';
+import UseEffectUpdatingPhase from './src/Components/UseEffectUpdatingPhase';
+// import UseEffect from './src/Components/UseEffectHook';
 // import { ClassComponent } from './src/Components/ClassComponent';
 // import Grid from './src/Components/Grid';
 // import First from './src/Components/First';
@@ -25,7 +26,8 @@ const App = () => {
       <SectionListScreen /> */}
       {/* <Grid /> */}
       {/* <ClassComponent /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      <UseEffectUpdatingPhase/>
     </View>
   );
 };
@@ -33,3 +35,4 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({});
+
