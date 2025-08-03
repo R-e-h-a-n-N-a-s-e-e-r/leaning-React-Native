@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { ClassComponent } from './src/Components/ClassComponent';
+import UseEffect from './src/Components/UseEffectHook';
+// import { ClassComponent } from './src/Components/ClassComponent';
 // import Grid from './src/Components/Grid';
 // import First from './src/Components/First';
 // import UseState from './src/Components/UseState';
@@ -23,7 +24,8 @@ const App = () => {
       <FlatListScreen />
       <SectionListScreen /> */}
       {/* <Grid /> */}
-      <ClassComponent />
+      {/* <ClassComponent /> */}
+      <UseEffect />
     </View>
   );
 };
