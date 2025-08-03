@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import UseEffectUpdatingPhase from './src/Components/UseEffectUpdatingPhase';
+import UseEffectUnMountingPhase from './src/Components/UseEffectUnMountingPhase';
+// import UseEffectUpdatingPhase from './src/Components/UseEffectUpdatingPhase';
 // import UseEffect from './src/Components/UseEffectHook';
 // import { ClassComponent } from './src/Components/ClassComponent';
 // import Grid from './src/Components/Grid';
@@ -27,7 +28,8 @@ const App = () => {
       {/* <Grid /> */}
       {/* <ClassComponent /> */}
       {/* <UseEffect /> */}
-      <UseEffectUpdatingPhase/>
+      {/* <UseEffectUpdatingPhase/> */}
+      <UseEffectUnMountingPhase/>
     </View>
   );
 };
