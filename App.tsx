@@ -1,7 +1,8 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 // import PressableComponent from './src/Components/PressableComponent';
-import StatusBarExample from './src/Components/StatusBarExample';
+// import StatusBarExample from './src/Components/StatusBarExample';
+import UseRefHook from './src/Components/UseRefHook';
 // import Loader from './src/Components/Loader';
 // import ButtonwithStyle from './src/Components/ButtonwithStyle';
 // import UseEffectUnMountingPhase from './src/Components/UseEffectUnMountingPhase';
@@ -37,7 +38,8 @@ const App = () => {
       {/* <ButtonwithStyle/> */}
       {/* <Loader /> */}
       {/* <PressableComponent/> */}
-      <StatusBarExample/>
+      {/* <StatusBarExample/> */}
+      <UseRefHook/>
     </View>
   );
 };
