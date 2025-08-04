@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import ButtonwithStyle from './src/Components/ButtonwithStyle';
+import Loader from './src/Components/Loader';
+// import ButtonwithStyle from './src/Components/ButtonwithStyle';
 // import UseEffectUnMountingPhase from './src/Components/UseEffectUnMountingPhase';
 // import UseEffectUpdatingPhase from './src/Components/UseEffectUpdatingPhase';
 // import UseEffect from './src/Components/UseEffectHook';
@@ -31,7 +32,8 @@ const App = () => {
       {/* <UseEffect /> */}
       {/* <UseEffectUpdatingPhase/> */}
       {/* <UseEffectUnMountingPhase/> */}
-      <ButtonwithStyle/>
+      {/* <ButtonwithStyle/> */}
+      <Loader />
     </View>
   );
 };
@@ -39,4 +41,3 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({});
-
