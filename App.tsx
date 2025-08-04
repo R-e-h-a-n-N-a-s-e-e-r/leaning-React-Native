@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import PressableComponent from './src/Components/PressableComponent';
+// import PressableComponent from './src/Components/PressableComponent';
+import StatusBarExample from './src/Components/StatusBarExample';
 // import Loader from './src/Components/Loader';
 // import ButtonwithStyle from './src/Components/ButtonwithStyle';
 // import UseEffectUnMountingPhase from './src/Components/UseEffectUnMountingPhase';
@@ -20,7 +21,7 @@ import PressableComponent from './src/Components/PressableComponent';
 
 const App = () => {
   return (
-    <View style={{ flex: 1, padding: 5 }}>
+    <View style={{ flex: 1 }}>
       {/* <First />
       <UseState />
       <Props />
@@ -35,7 +36,8 @@ const App = () => {
       {/* <UseEffectUnMountingPhase/> */}
       {/* <ButtonwithStyle/> */}
       {/* <Loader /> */}
-      <PressableComponent/>
+      {/* <PressableComponent/> */}
+      <StatusBarExample/>
     </View>
   );
 };
