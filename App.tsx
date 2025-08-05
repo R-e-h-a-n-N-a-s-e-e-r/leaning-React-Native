@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import ModaldialogBox from './src/Components/ModaldialogBox';
+// import ModaldialogBox from './src/Components/ModaldialogBox';
+import AlertExample from './src/Components/AlertExample';
 // import ModeldialogBox from './src/Components/ModaldialogBox';
 // import PressableComponent from './src/Components/PressableComponent';
 // import StatusBarExample from './src/Components/StatusBarExample';
@@ -42,7 +43,8 @@ const App = () => {
       {/* <PressableComponent/> */}
       {/* <StatusBarExample/> */}
       {/* <UseRefHook/> */}
-      <ModaldialogBox />
+      {/* <ModaldialogBox /> */}
+      <AlertExample/>
     </View>
   );
 };
