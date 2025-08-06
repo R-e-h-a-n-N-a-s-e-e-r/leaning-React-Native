@@ -1,12 +1,13 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import PlatformExample from './src/Components/PlatformExample';
 // import ModaldialogBox from './src/Components/ModaldialogBox';
 // import AlertExample from './src/Components/AlertExample';
 // import GET_API from './src/Components/GET_API';
 // import POST_API from './src/Components/POST_API';
 // import PUT_API from './src/Components/PUT_API';
 // import PATCH_API from './src/Components/PATCH_API';
-import DELETE_API from './src/Components/DELETE_API';
+// import DELETE_API from './src/Components/DELETE_API';
 // import ModeldialogBox from './src/Components/ModaldialogBox';
 // import PressableComponent from './src/Components/PressableComponent';
 // import StatusBarExample from './src/Components/StatusBarExample';
@@ -54,7 +55,8 @@ const App = () => {
       {/* <POST_API/> */}
       {/* <PUT_API/> */}
       {/* <PATCH_API/> */}
-      <DELETE_API/>
+      {/* <DELETE_API/> */}
+      <PlatformExample/>
     </View>
   );
 };
