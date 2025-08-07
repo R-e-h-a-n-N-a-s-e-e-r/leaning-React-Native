@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import PlatformExample from './src/Components/PlatformExample';
+// import PlatformExample from './src/Components/PlatformExample';
+import Search from './src/Components/Search';
 // import ModaldialogBox from './src/Components/ModaldialogBox';
 // import AlertExample from './src/Components/AlertExample';
 // import GET_API from './src/Components/GET_API';
@@ -56,7 +57,8 @@ const App = () => {
       {/* <PUT_API/> */}
       {/* <PATCH_API/> */}
       {/* <DELETE_API/> */}
-      <PlatformExample/>
+      {/* <PlatformExample/> */}
+      <Search/>
     </View>
   );
 };
