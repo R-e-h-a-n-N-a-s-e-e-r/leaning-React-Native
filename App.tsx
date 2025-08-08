@@ -10,8 +10,31 @@ const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} />
+      <Stack.Navigator
+        screenOptions={{
+          // this styling will apply on all the screens
+          headerStyle: styles.Header,
+          headerTitleStyle: styles.HeaderTitle,
+          headerTintColor: 'white',
+          contentStyle: styles.Screens,
+        }}
+      >
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          // options={{
+          //   title: 'Login Form',
+          //   headerTintColor: 'blue',
+          //   headerTitleStyle: {
+          //     fontSize: 25,
+          //     fontWeight: 'bold',
+          //     // color:'red'
+          //   },
+          //   headerStyle: {
+          //     backgroundColor: '#000000ff',
+          //   },
+          // }}
+        />
         <Stack.Screen
           name="Home"
           component={Home}
@@ -25,4 +48,16 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  Header: {
+    backgroundColor: '#6200EE',
+  },
+  HeaderTitle: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    // color: '#ffffff',
+  },
+  Screens: {
+    backgroundColor: '#00e5ffff',
+  },
+});
