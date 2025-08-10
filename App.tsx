@@ -1,79 +1,44 @@
-import { Alert, Button, StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler'; // for swipe to open drawer
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/Navigation/Home';
-import About from './src/Navigation/About';
 import Login from './src/Navigation/Login';
-import MyHeader from './src/Navigation/MyHeader';
-
+import About from './src/Navigation/About';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+const Drawer = createDrawerNavigator();
 const App = () => {
-  const Stack = createNativeStackNavigator();
-  const ButtonRight = () => (
-    <Button title="Right" onPress={() => Alert.alert('Right')} />
-  );
-  const ButtonLeft = () => (
-    <Button title="Left" onPress={() => Alert.alert('Left')} />
-  );
   return (
     <NavigationContainer>
-      <Stack.Navigator
+      <Drawer.Navigator
         screenOptions={{
-          // this styling will apply on all the screens
-          headerStyle: styles.Header,
-          headerTitleStyle: styles.HeaderTitle,
-          headerTintColor: 'white',
-          contentStyle: styles.Screens,
+          drawerLabelStyle: {
+            fontSize: 20,
+            color: '#000000ff',
+          },
+
+          drawerActiveBackgroundColor: '#ffffffff',
+          drawerStyle: {
+            backgroundColor: '#eeeeeeff',
+          },
+          headerStyle: {
+            backgroundColor: '#2b00ffff',
+          },
+          headerTintColor: '#ffffffff',
+          headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+          },
         }}
       >
-        <Stack.Screen
-          name="Header"
-          component={MyHeader}
-          options={{
-            title: '',
-            headerLeft: ButtonLeft,
-            headerRight:ButtonRight
-          }}
-        />
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          // options={{
-          //   title: 'Login Form',
-          //   headerTintColor: 'blue',
-          //   headerTitleStyle: {
-          //     fontSize: 25,
-          //     fontWeight: 'bold',
-          //     // color:'red'
-          //   },
-          //   headerStyle: {
-          //     backgroundColor: '#000000ff',
-          //   },
-          // }}
-        />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen name="About" component={About} />
-      </Stack.Navigator>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Login" component={Login} />
+        <Drawer.Screen name="About" component={About} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };
 
 export default App;
 
-const styles = StyleSheet.create({
-  Header: {
-    backgroundColor: '#6200EE',
-  },
-  HeaderTitle: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    // color: '#ffffff',
-  },
-  Screens: {
-    backgroundColor: '#00e5ffff',
-  },
-});
+const styles = StyleSheet.create({});

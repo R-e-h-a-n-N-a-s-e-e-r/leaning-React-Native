@@ -5,10 +5,7 @@ const Home = ({ navigation }: any) => {
   return (
     <View>
       <Text>Home</Text>
-      <Button
-        title="About Screen"
-        onPress={() => navigation.navigate('About')}
-      />
+      <Button title="Open Drawer" onPress={() => navigation.openDrawer()} />
     </View>
   );
 };

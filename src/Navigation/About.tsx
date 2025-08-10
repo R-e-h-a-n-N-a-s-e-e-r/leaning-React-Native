@@ -1,14 +1,10 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const About = (props:any) => {
-  // props is an object containing all the data
-  // const {username,Age}=props.route.params
-  const {username}=props.route.params
+const About = () => {
   return (
     <View>
-      <Text>Welcome {username}</Text>
-      <Button title="Go Back" onPress={()=>props.navigation.goBack()}/>
+      <Text>About</Text>
     </View>
   );
 };
