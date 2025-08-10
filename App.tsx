@@ -1,65 +1,41 @@
-import { Button, StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler'; // for swipe to open drawer
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-// import PlatformExample from './src/Components/PlatformExample';
-import Search from './src/Components/Search';
-// import ModaldialogBox from './src/Components/ModaldialogBox';
-// import AlertExample from './src/Components/AlertExample';
-// import GET_API from './src/Components/GET_API';
-// import POST_API from './src/Components/POST_API';
-// import PUT_API from './src/Components/PUT_API';
-// import PATCH_API from './src/Components/PATCH_API';
-// import DELETE_API from './src/Components/DELETE_API';
-// import ModeldialogBox from './src/Components/ModaldialogBox';
-// import PressableComponent from './src/Components/PressableComponent';
-// import StatusBarExample from './src/Components/StatusBarExample';
-// import UseRefHook from './src/Components/UseRefHook';
-// import Loader from './src/Components/Loader';
-// import ButtonwithStyle from './src/Components/ButtonwithStyle';
-// import UseEffectUnMountingPhase from './src/Components/UseEffectUnMountingPhase';
-// import UseEffectUpdatingPhase from './src/Components/UseEffectUpdatingPhase';
-// import UseEffect from './src/Components/UseEffectHook';
-// import { ClassComponent } from './src/Components/ClassComponent';
-// import Grid from './src/Components/Grid';
-// import First from './src/Components/First';
-// import UseState from './src/Components/UseState';
-// import Props from './src/Components/Props';
-// import InputText from './src/Components/InputText';
-// import Styling from './src/Components/Styling';
-// import FlatListScreen from './src/Components/FlatListScreen';
-// import SectionListScreen from './src/Components/SectionListScreen';
-// import LoginForm from './src/Components/LoginForm';
-// import ContantListScreen from './src/Screens/Contant/ContantListScreen';
-
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/Navigation/Home';
+import Login from './src/Navigation/Login';
+import About from './src/Navigation/About';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+const Drawer = createDrawerNavigator();
 const App = () => {
   return (
-    <View style={{ flex: 1 }}>
-      {/* <First />
-      <UseState />
-      <Props />
-      <InputText />
-      <Styling />
-      <FlatListScreen />
-      <SectionListScreen /> */}
-      {/* <Grid /> */}
-      {/* <ClassComponent /> */}
-      {/* <UseEffect /> */}
-      {/* <UseEffectUpdatingPhase/> */}
-      {/* <UseEffectUnMountingPhase/> */}
-      {/* <ButtonwithStyle/> */}
-      {/* <Loader /> */}
-      {/* <PressableComponent/> */}
-      {/* <StatusBarExample/> */}
-      {/* <UseRefHook/> */}
-      {/* <ModaldialogBox /> */}
-      {/* <AlertExample/> */}
-      {/* <GET_API/> */}
-      {/* <POST_API/> */}
-      {/* <PUT_API/> */}
-      {/* <PATCH_API/> */}
-      {/* <DELETE_API/> */}
-      {/* <PlatformExample/> */}
-      <Search/>
-    </View>
+    <NavigationContainer>
+      <Drawer.Navigator
+        screenOptions={{
+          drawerLabelStyle: {
+            fontSize: 20,
+            color: '#000000ff',
+          },
+
+          drawerActiveBackgroundColor: '#ffffffff',
+          drawerStyle: {
+            backgroundColor: '#eeeeeeff',
+          },
+          headerStyle: {
+            backgroundColor: '#2b00ffff',
+          },
+          headerTintColor: '#ffffffff',
+          headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: 'bold',
+          },
+        }}
+      >
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Login" component={Login} />
+        <Drawer.Screen name="About" component={About} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 };
 
