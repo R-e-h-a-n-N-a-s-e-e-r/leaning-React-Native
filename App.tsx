@@ -1,49 +1,32 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './src/Navigation/Home';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/Navigation/Home';
+import Login from './src/Navigation/Login';
 import Settings from './src/Navigation/Settings';
-import Icon from 'react-native-vector-icons/Ionicons';
-
-const Profile = () => {
-  return (
-    <View>
-      <Text>Profile</Text>
-    </View>
-  );
-};
-const Tab = createBottomTabNavigator();
-const getBarIcon = (focused: any, size: any, color: any, Route_name: any) => {
-  let icon;
-  if (Route_name === 'Home') {
-    icon = focused ? 'home' : 'home-outline';
-  } else if (Route_name === 'Profile') {
-    icon = focused ? 'person' : 'person-outline';
-  } else {
-    icon = focused ? 'settings' : 'settings-outline';
-  }
-  return <Icon name={icon} size={size} color={color} />;
-};
 const App = () => {
+  const Top = createMaterialTopTabNavigator();
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, size, color }) =>
-            getBarIcon(focused, size, color, route.name),
+      <Top.Navigator
+        screenOptions={{
           tabBarActiveTintColor: '#007bff',
-          tabBarInactiveTintColor: '#2e2e2eff',
-          tabBarLabelStyle: {
-            fontWeight: 700,
-            fontSize: 13,
+          tabBarInactiveTintColor: 'gray',
+          tabBarIndicatorStyle: {
+            borderBottomColor: 'white',
           },
-        })}
+          tabBarLabelStyle: {
+            fontSize: 18,
+            fontWeight:'700'
+          },
+      
+        }}
       >
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Settings" component={Settings} />
-        <Tab.Screen name="Profile" component={Profile} />
-      </Tab.Navigator>
+        <Top.Screen name="Home" component={Home} />
+        <Top.Screen name="Login" component={Login} />
+        <Top.Screen name="Settings" component={Settings} />
+      </Top.Navigator>
     </NavigationContainer>
   );
 };
